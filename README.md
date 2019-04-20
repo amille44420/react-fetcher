@@ -1,6 +1,9 @@
 # React Context Fetcher
 
+[![npm](https://img.shields.io/npm/v/react-context-fetcher.svg)](https://www.npmjs.com/package/react-context-fetcher)
+[![Build Status](https://travis-ci.org/amille44420/react-fetcher.svg?branch=master)](https://travis-ci.org/amille44420/react-fetcher)
 [![Greenkeeper badge](https://badges.greenkeeper.io/amille44420/react-fetcher.svg)](https://greenkeeper.io/)
+[![codecov](https://codecov.io/gh/amille44420/react-fetcher/branch/master/graph/badge.svg)](https://codecov.io/gh/amille44420/react-fetcher)
 
 Simple and universal data fetching library for React using context to consume data.
 
