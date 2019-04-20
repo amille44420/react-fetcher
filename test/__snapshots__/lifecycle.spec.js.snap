@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+Object {
+  "data": null,
+  "error": null,
+  "loading": true,
+  "refetch": [Function],
+}
+`;
+
+exports[`renders without crashing 2`] = `
+Object {
+  "data": 42,
+  "error": null,
+  "loading": false,
+  "refetch": [Function],
+}
+`;
+
+exports[`renders without crashing 3`] = `
+Object {
+  "data": 42,
+  "error": null,
+  "loading": true,
+  "refetch": [Function],
+}
+`;
+
+exports[`renders without crashing 4`] = `
+Object {
+  "data": null,
+  "error": "error",
+  "loading": false,
+  "refetch": [Function],
+}
+`;
+
+exports[`renders without crashing 5`] = `
+Object {
+  "data": null,
+  "error": "error",
+  "loading": true,
+  "refetch": [Function],
+}
+`;
+
+exports[`renders without crashing 6`] = `
+Object {
+  "data": 21,
+  "error": null,
+  "loading": false,
+  "refetch": [Function],
+}
+`;
