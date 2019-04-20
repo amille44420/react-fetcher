@@ -1,5 +1,7 @@
 # React Context Fetcher
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amille44420/react-fetcher.svg)](https://greenkeeper.io/)
+
 Simple and universal data fetching library for React using context to consume data.
 
 ```bash
