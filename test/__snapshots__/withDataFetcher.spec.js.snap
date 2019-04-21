@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `
+exports[`test withDataFetcher lifecyle 1`] = `
 Object {
   "data": null,
   "error": null,
@@ -9,7 +9,7 @@ Object {
 }
 `;
 
-exports[`renders without crashing 2`] = `
+exports[`test withDataFetcher lifecyle 2`] = `
 Object {
   "data": 42,
   "error": null,
@@ -18,7 +18,7 @@ Object {
 }
 `;
 
-exports[`renders without crashing 3`] = `
+exports[`test withDataFetcher lifecyle 3`] = `
 Object {
   "data": 42,
   "error": null,
@@ -27,7 +27,7 @@ Object {
 }
 `;
 
-exports[`renders without crashing 4`] = `
+exports[`test withDataFetcher lifecyle 4`] = `
 Object {
   "data": null,
   "error": "error",
@@ -36,7 +36,7 @@ Object {
 }
 `;
 
-exports[`renders without crashing 5`] = `
+exports[`test withDataFetcher lifecyle 5`] = `
 Object {
   "data": null,
   "error": "error",
@@ -45,7 +45,7 @@ Object {
 }
 `;
 
-exports[`renders without crashing 6`] = `
+exports[`test withDataFetcher lifecyle 6`] = `
 Object {
   "data": 21,
   "error": null,
