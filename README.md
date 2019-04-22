@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/amille44420/react-fetcher.svg?branch=master)](https://travis-ci.org/amille44420/react-fetcher)
 [![Greenkeeper badge](https://badges.greenkeeper.io/amille44420/react-fetcher.svg)](https://greenkeeper.io/)
 [![codecov](https://codecov.io/gh/amille44420/react-fetcher/branch/master/graph/badge.svg)](https://codecov.io/gh/amille44420/react-fetcher)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 Simple and universal data fetching library for React using context to consume data.
 
