@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test renderWithData 1`] = `"<p>42</p>"`;
+
+exports[`test renderWithData 2`] = `
+Array [
+  Object {
+    "props": Object {},
+    "result": Object {
+      "data": 42,
+      "err": null,
+    },
+  },
+]
+`;
+
+exports[`test renderWithData 3`] = `
+<p>
+  42
+</p>
+`;
+
+exports[`test renderWithData with nested fetchers 1`] = `"<p>first <!-- -->0<!-- --> then <!-- -->1</p>"`;
+
+exports[`test renderWithData with nested fetchers 2`] = `
+Array [
+  Object {
+    "props": Object {},
+    "result": Object {
+      "data": 42,
+      "err": null,
+    },
+  },
+  Object {
+    "props": Object {
+      "value": 0,
+    },
+    "result": Object {
+      "data": 1,
+      "err": null,
+    },
+  },
+]
+`;
+
+exports[`test renderWithData with nested fetchers 3`] = `
+<p>
+  first 
+  0
+   then 
+  1
+</p>
+`;
