@@ -8,7 +8,8 @@
   "keywords": [
     "react",
     "reactjs",
-    "fetch"
+    "fetch",
+    "ssr"
   ],
   "license": "MIT",
   "author": "Adrien Mille <adrien.mille.aer@gmail.com>",
@@ -38,12 +39,14 @@
     "commit": "git-cz"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "prop-types": "15.7.2"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
     "hoist-non-react-statics": "^3.3.0",
-    "react-is": "^16.8.6"
+    "react-is": "^16.8.6",
+    "shallowequal": "^1.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -78,7 +81,9 @@
     "jest": "^24.8.0",
     "jest-dom": "^4.0.0",
     "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
     "rimraf": "^2.6.3",
     "rollup": "^1.16.3",

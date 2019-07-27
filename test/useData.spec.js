@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
-import createDataFetcher from '../src/index';
+import { createDataFetcher } from '../src/index';
 
 test('test useData lifecycle', async () => {
   // the mock fetcher

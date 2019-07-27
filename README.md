@@ -7,6 +7,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 Simple and universal data fetching library for React using context to consume data.
+It supports server side rendering (SSR).
 
 ```bash
 $ npm install --save react-context-fetcher
@@ -18,7 +19,7 @@ $ yarn add react-context-fetcher
 
 ```js
 import React from 'react';
-import createDataFetcher from 'react-data-fetcher';
+import { createDataFetcher } from 'react-data-fetcher';
 
 // function fetching data
 const getData = async () => fetch(/* ... */).then(res => res.json());
@@ -48,7 +49,7 @@ const MyComponent = ({ loading, error, data }) => {
   return <p>got data: {data}</p>
 };
 
-export default MyFetcher.withDataFetcher(MyComponent);
+export default withDataFetcher(MyComponent);
 ```
 
 ### createDataFetcher(fetcher, options)
@@ -90,6 +91,9 @@ It fetch data and manage their lifecycle, the whole state is given through props
   pure: true,
   // should we refetch on props change
   refetchOnPropChanges: false,
+  // function defining if there's a change on props
+  // default function comes from https://www.npmjs.com/package/shallowequal
+  shouldUpdate: shallowequal,
   // we may want to process the fetched data
   cleanData: null,
 }
@@ -119,7 +123,7 @@ The wrapped component  will receive 3 props : `loading`, `error` and `data`.
 
 ### withData(options | wrappedComponent)
 
-`withData` is a very simple HOC that consume the contexte provider by `withDataFetcher` and send it to props. There's a few options for this HOC.
+`withData` is a very simple HOC that consume the context provided by `withDataFetcher` and send it to props. There's a few options for this HOC.
 
 ```js
 // consumer options
@@ -149,4 +153,56 @@ const MyComponent = () => {
   
   /* ... */
 };
+```
+
+## Server Side Rendering
+
+React Context Fetcher comes in with SSR support.
+
+### Server side
+
+```js
+import React from 'react';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { renderWithData } from 'react-data-fetcher';
+
+const Html = ({ children, data }) => (
+    <html>
+      <body>
+        <div id="root" dangerouslySetInnerHTML={{ __html: children }} />
+        <script dangerouslySetInnerHTML={{ __html: `window.__FETCHER_STATE__=${JSON.stringify(data)};` }} />
+      </body>
+    </html>
+);
+
+router.get('*', async (req, res, next) => {
+  try {
+    const [innerHtml, data] = await renderWithData(<App/>, renderToString);
+    const html = renderToStaticMarkup(<Html data={data}>{innerHtml}</Html>)
+    
+    res.status(200);
+    res.send(`<!doctype html>\n${html}`);
+    res.end();
+  } catch(error) {
+    next(error);
+  }
+});
+```
+
+### Client side
+
+```js
+import React from 'react';
+import { render } from 'react-dom';
+import { SSRProvider } from 'react-data-fetcher';
+
+const root = document.getElementById('root');
+
+const tree = (
+  <SSRProvider state={window.__FETCHER_STATE__}>
+    <App />
+  </SSRProvider>
+);
+
+render(tree, root);
 ```

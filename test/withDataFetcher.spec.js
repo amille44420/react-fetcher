@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
-import createDataFetcher from '../src/index';
+import { createDataFetcher } from '../src/index';
 
 test('test withDataFetcher lifecyle', async () => {
   // the variable in which we'll store the resolve/reject methods
