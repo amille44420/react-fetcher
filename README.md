@@ -76,11 +76,11 @@ The `fetcher` option is the function that will be called whenever we want to fet
 const getData = (variables, props) => { /* ... */ };
 ```
 
-It will receive both the computed variables and receive props as arguments.
+It will receive both the computed variables and received props as arguments.
 
 ### withDataFetcher(options | wrappedComponent)
 
-It fetch data and manage their lifecycle, the whole state is given through props to `children` but also dispatched through a react context.
+It fetches data and manage their lifecycle, the whole state is given through props to `children` but also dispatched through a react context.
 
 ```js
 // provider options
@@ -99,7 +99,8 @@ It fetch data and manage their lifecycle, the whole state is given through props
 }
 ```
 
-You may omit options to use this HOC right away on your component. Or you may provide option and retrieve the configured HOC.
+You may omit options to use this HOC right away on your component (ex: `withDataFetcher(Component)`), 
+or you may provide the options first and retrieve the configured HOC to apply on your component (ex: `withDataFetcher(options)(Component)`).
 
 ```js
 export default compose(
@@ -110,7 +111,7 @@ export default compose(
 )(MyComponent);
 ```
 
-The options `variables` may be an function that will receive props as first argument.
+The option `variables` may be an function that will receive props as its first argument.
 
 ```js
 withDataFetcher({
@@ -123,7 +124,7 @@ The wrapped component  will receive 3 props : `loading`, `error` and `data`.
 
 ### withData(options | wrappedComponent)
 
-`withData` is a very simple HOC that consume the context provided by `withDataFetcher` and send it to props. There's a few options for this HOC.
+`withData` is a very simple HOC that consumes the context provided by `withDataFetcher` and sends it to props. There's a few options for this HOC.
 
 ```js
 // consumer options
