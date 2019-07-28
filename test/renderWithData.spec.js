@@ -4,7 +4,6 @@ import renderer from 'react-test-renderer';
 import { createDataFetcher, renderWithData, SSRProvider } from '../src/index';
 
 test('test renderWithData', async () => {
-  delete console.log;
   // prepare a variable in which we'll store the resolver
   let resolvePromise = null;
 
