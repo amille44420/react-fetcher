@@ -68,8 +68,6 @@ const createDataFetcher = (fetcher, customFetcherOptions = null) => {
       const ComponentBase = options.pure ? PureComponent : Component;
 
       class Provider extends ComponentBase {
-        static contextType = SSRContext;
-
         constructor(props) {
           super(props);
 
@@ -211,6 +209,8 @@ const createDataFetcher = (fetcher, customFetcherOptions = null) => {
           );
         }
       }
+
+      Provider.contextType = SSRContext;
 
       const wrappedDisplayName = getDisplayName(WrappedComponent);
 

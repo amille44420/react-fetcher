@@ -25,6 +25,7 @@
     "node": true
   },
   "rules": {
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/jsx-uses-react": 1,
     "react/jsx-no-undef": 2,
