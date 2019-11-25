@@ -9,12 +9,14 @@ const env = process.env.NODE_ENV;
 
 const config = {
   input: 'src/index.js',
-  external: Object.keys(pkg.peerDependencies || {}).concat('react-dom'),
+  external: [...Object.keys(pkg.peerDependencies), 'react-dom'],
   output: {
     format: 'umd',
     name: 'ReactContextFetcher',
     globals: {
       react: 'React',
+      'react-dom': 'ReactDOM',
+      'prop-types': 'PropTypes',
     },
   },
   plugins: [
@@ -31,12 +33,7 @@ const config = {
         'node_modules/react-is/index.js': ['isValidElementType'],
       },
     }),
-  ],
-};
-
-if (env === 'production') {
-  config.plugins.push(
-    terser({
+    env === 'production' && terser({
       compress: {
         pure_getters: true,
         unsafe: true,
@@ -44,7 +41,7 @@ if (env === 'production') {
         warnings: false,
       },
     }),
-  );
-}
+  ].filter(Boolean),
+};
 
 export default config;
