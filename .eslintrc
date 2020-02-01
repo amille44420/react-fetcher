@@ -1,41 +1,16 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react",
-    "plugin:import/recommended"
+    "@amille/eslint-config/react"
   ],
   "settings": {
     "react": {
       "version": "detect"
     }
   },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true
-    }
-  },
   "env": {
     "browser": true,
     "mocha": true,
     "node": true
-  },
-  "rules": {
-    "react/jsx-props-no-spreading": "off",
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "react/jsx-uses-react": 1,
-    "react/jsx-no-undef": 2,
-    "react/jsx-wrap-multilines": 2,
-    "react/no-string-refs": 0,
-    "prettier/prettier": "error"
-  },
-  "plugins": [
-    "import",
-    "react",
-    "prettier"
-  ]
+  }
 }
