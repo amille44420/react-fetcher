@@ -3,13 +3,13 @@ const cjs = NODE_ENV === 'test' || BABEL_ENV === 'commonjs';
 const loose = true;
 
 module.exports = {
-  presets: [['@babel/env', { loose, modules: false }]],
-  plugins: [
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    ['@babel/proposal-decorators', { legacy: true }],
-    ['@babel/proposal-object-rest-spread', { loose }],
-    '@babel/transform-react-jsx',
-    cjs && ['@babel/transform-modules-commonjs', { loose }],
-    ['@babel/transform-runtime', { useESModules: !cjs }],
-  ].filter(Boolean),
+    presets: [['@babel/env', { loose, modules: false }]],
+    plugins: [
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
+        ['@babel/proposal-decorators', { legacy: true }],
+        ['@babel/proposal-object-rest-spread', { loose }],
+        '@babel/transform-react-jsx',
+        cjs && ['@babel/transform-modules-commonjs', { loose }],
+        ['@babel/transform-runtime', { useESModules: !cjs }],
+    ].filter(Boolean),
 };
