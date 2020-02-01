@@ -1,7 +1,7 @@
 # React Context Fetcher
 
 [![npm](https://img.shields.io/npm/v/react-context-fetcher.svg)](https://www.npmjs.com/package/react-context-fetcher)
-[![Build Status](https://travis-ci.org/amille44420/react-fetcher.svg?branch=master)](https://travis-ci.org/amille44420/react-fetcher)
+![CircleCI](https://img.shields.io/circleci/build/github/amille44420/react-fetcher)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=amille44420/react-fetcher)](https://dependabot.com)
 [![codecov](https://codecov.io/gh/amille44420/react-fetcher/branch/master/graph/badge.svg)](https://codecov.io/gh/amille44420/react-fetcher)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)

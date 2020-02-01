@@ -38,7 +38,7 @@
     "test": "jest",
     "test:coverage": "npm run test -- --coverage",
     "commit": "git-cz",
-    "semantic-release": "semantic-release"
+    "publish": "semantic-release"
   },
   "peerDependencies": {
     "react": "^16.12.0",
