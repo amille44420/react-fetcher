@@ -1,3 +1,5 @@
+## [2.0.5](https://github.com/amille44420/react-fetcher/compare/v2.0.4...v2.0.5) (2020-04-13)
+
 ## [2.0.4](https://github.com/amille44420/react-fetcher/compare/v2.0.3...v2.0.4) (2020-03-24)
 
 ## [2.0.3](https://github.com/amille44420/react-fetcher/compare/v2.0.2...v2.0.3) (2020-03-23)
