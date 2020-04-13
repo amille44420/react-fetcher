@@ -68,6 +68,7 @@ test('test renderWithData with nested fetchers', async () => {
     });
 
     // create components
+    // eslint-disable-next-line react/prop-types
     let SecondLayout = ({ value }) => {
         const { loading, data } = useSecond();
 
