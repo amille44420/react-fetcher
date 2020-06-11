@@ -3,9 +3,9 @@
 
 
 "@amille/eslint-config@^1.3.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@amille/eslint-config/-/eslint-config-1.4.1.tgz#26e02216ce6744e07b6f1d74ab24c3c0bd58bd31"
-  integrity sha512-znrVC9yRiIV6XdHA/7s23ZfLHpTCnLD1FB+Pytw5XxpJoum2RbUygu77k2bnn8xMTf/wER/VS7ciA6aascLCFw==
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@amille/eslint-config/-/eslint-config-1.4.2.tgz#f3983e67e80f598af7fbeaeac2d914845d124d71"
+  integrity sha512-VgrcN94JmDvIVHqo1IBUze+Yt3uDk2UkDYzI2lvr9f8m7Xwu4oHC92K/zbvL0yFHN1mdAgJpzb0vfN9EXgVRYg==
   dependencies:
     eslint-config-airbnb "^18.1.0"
     eslint-config-airbnb-base "^14.1.0"
