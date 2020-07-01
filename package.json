@@ -1,6 +1,6 @@
 {
   "name": "react-context-fetcher",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Factory to build provider and consumers to fetch data in React",
   "repository": "github:amille44420/react-fetcher",
   "bugs": "https://github.com/amille44420/react-fetcher/issues",
