@@ -804,11 +804,11 @@
     "@babel/helper-plugin-utils" "^7.10.1"
 
 "@babel/plugin-transform-react-display-name@^7.8.3":
-  version "7.10.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-display-name/-/plugin-transform-react-display-name-7.10.3.tgz#e3c246e1b4f3e52cc7633e237ad9194c0ec482e7"
-  integrity sha512-dOV44bnSW5KZ6kYF6xSHBth7TFiHHZReYXH/JH3XnFNV+soEL1F5d8JT7AJ3ZBncd19Qul7SN4YpBnyWOnQ8KA==
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-display-name/-/plugin-transform-react-display-name-7.10.4.tgz#b5795f4e3e3140419c3611b7a2a3832b9aef328d"
+  integrity sha512-Zd4X54Mu9SBfPGnEcaGcOrVAYOtjT2on8QZkLKEq1S/tHexG39d9XXGZv19VfRrDjPJzFmPfTAqOQS1pfFOujw==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.10.3"
+    "@babel/helper-plugin-utils" "^7.10.4"
 
 "@babel/plugin-transform-react-jsx@^7.8.3":
   version "7.10.3"
